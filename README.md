@@ -37,3 +37,9 @@ The application will be built using:
   - Tuesday: Make an information display box. Make each character sheet element clickable and return a description to the display box. Refactor this to be used in character creation form. Create a dice roller that displays results in the info box.
   - Wednesday: Focus on styling.
   - Thursday: Deploy to GitHub pages
+
+## Bonus Features
+Features that could be added in the future: 
+  - A way to export the character sheet so users can save them.
+  - Multi classing options.
+  - Combatant creation.
