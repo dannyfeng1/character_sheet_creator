@@ -1,13 +1,7 @@
 # D&D 5E Character Creator and Editor
 
 ## Background
-    This application is a resource for Dungeons and Dragons Fifth Edition. 
-    D&D character creation is oftentimes one of the most overwhelming experiences for first time players. 
-    There are so many options and possibilities to explore due to the fantasy nature and large world of DnD. 
-    This application will streamline the character creation process by providing the user with digestable amounts of information 
-    in a step by step process. 
-    After creation, a modifiable character sheet will be generated for the new players for use as a reference on their 
-    first Dungeons and Dragons adventure!
+  This application is a resource for Dungeons and Dragons Fifth Edition. D&D character creation is oftentimes one of the most overwhelming experiences for first time players. There are so many options and possibilities to explore due to the fantasy nature and large world of DnD. This application will streamline the character creation process by providing the user with digestable amounts of information in a step by step process. After creation, a modifiable character sheet will be generated for the new players for use as a reference on their first Dungeons and Dragons adventure!
  
  ## Functionality and MVPS
  With this application users will be able to:
@@ -32,15 +26,17 @@ In addition, this application will include:
 ## Technologies, Libraries, APIs
 The application will be built using: 
   - npm to manage project dependencies.
-  - [The D&D 5th edition API](http://www.dnd5eapi.co/)
-  - 3JS for dice models.
+  - [The D&D 5th edition API](http://www.dnd5eapi.co/) to access a directory of D&D information.
+  - 3JS for creating dice models.
+  - Javascript for underlying logic of the program.
+  - HTML/CSS to style the program for a better user experience.
 
 ## Implementation Timeline
-  - Friday and weekend: Set up project, including webpack and postman to get comfortable with D&D 5E API. Make character creation form. Render multiple forms that create each other. Access the API to get information regarding selected character creation options. Create Character class that will take form info. 
-  - Monday: Create a CharacterSheet class that extrapolates info from Character object. Use the CharacterSheet class to generate HTML elements for a character sheet object to be rendered. Create a search feature that utilizes D&D 5E API for equipment and spells. Results can be added to the character sheet.
-  - Tuesday: Make an information display box. Make each character sheet element clickable and return a description to the display box. Refactor this to be used in character creation form. Create a dice roller that displays results in the info box.
-  - Wednesday: Focus on styling.
-  - Thursday: Deploy to GitHub pages
+  - 9/3-9/5: Set up project, including webpack and postman to get comfortable with D&D 5E API. Make character creation form. Render multiple forms that create each other. Access the API to get information regarding selected character creation options. Create Character class that will take form info. 
+  - 9/6: Create a CharacterSheet class that extrapolates info from Character object. Use the CharacterSheet class to generate HTML elements for a character sheet object to be rendered. Create a search feature that utilizes D&D 5E API for equipment and spells. Results can be added to the character sheet.
+  - 9/7: Make an information display box. Make each character sheet element clickable and return a description to the display box. Refactor this to be used in character creation form. Create a dice roller that displays results in the info box.
+  - 9/8: Focus on styling.
+  - 9/9: Deploy to GitHub pages
 
 ## Bonus Features
 Features that could be added in the future: 
