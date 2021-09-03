@@ -1,4 +1,4 @@
-# character_sheet_creator
+# D&D 5E Character Creator and Editor
 
 ## Background
     This application is a resource for Dungeons and Dragons Fifth Edition. D&D character creation is oftentimes one of the most overwhelming experiences for first time players. 
