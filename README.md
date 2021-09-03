@@ -1,9 +1,13 @@
 # D&D 5E Character Creator and Editor
 
 ## Background
-    This application is a resource for Dungeons and Dragons Fifth Edition. D&D character creation is oftentimes one of the most overwhelming experiences for first time players. 
-    There are so many options and possibilities to explore due to the fantasy nature and large world of DnD. This application will streamline the character creation process by providing the user with digestable amounts of information in a step by step process. 
-    After creation, a modifiable character sheet will be generated for the new players for use as a reference on their first Dungeons and Dragons adventure!
+    This application is a resource for Dungeons and Dragons Fifth Edition. 
+    D&D character creation is oftentimes one of the most overwhelming experiences for first time players. 
+    There are so many options and possibilities to explore due to the fantasy nature and large world of DnD. 
+    This application will streamline the character creation process by providing the user with digestable amounts of information 
+    in a step by step process. 
+    After creation, a modifiable character sheet will be generated for the new players for use as a reference on their 
+    first Dungeons and Dragons adventure!
  
  ## Functionality and MVPS
  With this application users will be able to:
