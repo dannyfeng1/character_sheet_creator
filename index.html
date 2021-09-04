@@ -10,9 +10,95 @@
 </head>
 
 <body>
-  <form id="character-form">
-    <button>Create a new Character</button>
-  </form>
+  <h1>Dungeons and Dragons 5th Edition Character Creator</h1>
+  <div id="char-generator">
+    <form action="" id="char-form">
+      <div class="basic-info form-display">
+        <label>Character Name:
+          <input type="text">
+        </label>
+        <br>
+        <label>Age:
+          <input type="text">
+        </label>
+      <br>
+      <label>Gender:
+        <br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+      </label>
+      <br>
+      <button id="basic-info-button">Next</button>
+    </div>
+    <div class="class-info hidden">
+      <label>Class:
+      <br>
+        <input type="radio" id="barbarian" class="class-select" name="class" value="barbarian">
+        <label for="barbarian">Barbarian</label><br>
+        <input type="radio" id="bard" class="class-select" name="class" value="bard">
+        <label for="bard">Bard</label><br>
+        <input type="radio" id="cleric" class="class-select" name="class" value="cleric">
+        <label for="cleric">Cleric</label><br>
+        <input type="radio" id="druid" class="class-select" name="class" value="druid">
+        <label for="druid">Druid</label><br>
+        <input type="radio" id="fighter" class="class-select" name="class" value="fighter">
+        <label for="fighter">Fighter</label><br>
+        <input type="radio" id="monk" class="class-select" name="class" value="monk">
+        <label for="monk">Monk</label><br>
+        <input type="radio" id="paladin" class="class-select" name="class" value="paladin">
+        <label for="paladin">Paladin</label><br>
+        <input type="radio" id="ranger" class="class-select" name="class" value="ranger">
+        <label for="ranger">Ranger</label><br>
+        <input type="radio" id="rogue" class="class-select" name="class" value="rogue">
+        <label for="rogue">Rogue</label><br>
+        <input type="radio" id="sorcerer" class="class-select" name="class" value="sorcerer">
+        <label for="sorcerer">Sorceror</label><br>
+        <input type="radio" id="warlock" class="class-select" name="class" value="warlock">
+        <label for="warlock">Warlock</label><br>
+        <input type="radio" id="wizard" class="class-select" name="class" value="wizard">
+        <label for="wizard">Wizard</label>
+    </label>
+    <br>
+    <button id="class-info-button">Next</button>
+    </div>
+    <div class="race-info hidden">
+      <label>Race:
+        <br>
+          <input type="radio" id="dragonborn" name="race" value="dragonborn">
+          <label for="dragonborn">Dragonborn</label><br>
+          <input type="radio" id="dwarf" name="race" value="dwarf">
+          <label for="dwarf">Dwarf</label><br>
+          <input type="radio" id="elf" name="race" value="elf">
+          <label for="elf">Elf</label><br>
+          <input type="radio" id="gnome" name="race" value="gnome">
+          <label for="gnome">Gnome</label><br>
+          <input type="radio" id="half-elf" name="race" value="half-elf">
+          <label for="half-elf">Half-elf</label><br>
+          <input type="radio" id="half-orc" name="race" value="half-orc">
+          <label for="half-orc">Half-orc</label><br>
+          <input type="radio" id="halfing" name="race" value="halfing">
+          <label for="halfing">Halfling</label><br>
+          <input type="radio" id="human" name="race" value="human">
+          <label for="human">Human</label><br>
+          <input type="radio" id="tiefling" name="race" value="tiefling">
+          <label for="tiefling">Tiefling</label><br>
+      </label>
+      <br>
+      <button id="race-info-button">Next</button>
+    </div>
+    </form>
+
+    <div id="display-box">
+      <p id="basic-display" class="basic-info form-display">Introduction to program and basic instructions</p>
+      <p id="class-display"class="class-info hidden">Class information from API. Kissies for Kent</p>
+      <p id="race-display"class="race-info hidden">Race info from API</p>
+    </div>
+
+  </div>
 </body>
 
 </html>
