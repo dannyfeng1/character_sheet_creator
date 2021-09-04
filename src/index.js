@@ -1,4 +1,6 @@
 import {APIUtil} from './APIUtil.js';
+import {DisplayInfo} from './displayInfo.js'
+
 document.addEventListener("DOMContentLoaded", function() {
   // let rogueInfo = APIUtil.getClassInfo("rogue");
   // console.log(rogueInfo)
@@ -43,17 +45,37 @@ document.addEventListener("DOMContentLoaded", function() {
   
   let classOptions = document.querySelectorAll(".class-select")
   const showClassInfo = (e) => {
+    e.stopPropagation()
     let dndclass = e.target.value.toString();
-    let data = APIUtil.getClassInfo(dndclass);
-    let display = document.querySelector("#class-display");
-    data.then(() => {
-      console.log(data)
-      display.innerHTML = data
+    let classData = APIUtil.getClassInfo(dndclass);
+    let classDisplay = document.querySelector("#class-display");
+
+    classData.then(classData => {
+      classDisplay.innerHTML = "";
+      let classDisplayInfo = DisplayInfo.createClassInfo(classData);
+      classDisplay.append(classDisplayInfo);
     })
-    // display.innerHTML = data;
   }
 
   classOptions.forEach(option => {
-    option.addEventListener("click", showClassInfo)
+    option.addEventListener("click", showClassInfo);
+  })
+
+  let raceOptions = document.querySelectorAll(".race-select");
+  const showRaceInfo = (e) => {
+    e.stopPropagation();
+    let race = e.target.value.toString();
+    let raceData = APIUtil.getRaceInfo(race);
+    let raceDisplay = document.querySelector("#race-display");
+
+    raceData.then(raceData => {
+      raceDisplay.innerHTML = "";
+      let raceDisplayInfo = DisplayInfo.createRaceInfo(raceData);
+      raceDisplay.append(raceDisplayInfo)
+    })
+  }
+
+  raceOptions.forEach(option => {
+    option.addEventListener("click", showRaceInfo)
   })
 })
