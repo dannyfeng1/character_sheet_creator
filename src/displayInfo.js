@@ -1,50 +1,23 @@
-const CLASS_DESCRIPTION = {
-  "Barbarian": "Barbarian description",
-  "Bard": "Bard description",
-  "Cleric": "Cleric description",
-  "Druid": "Druid description",
-  "Fighter": "Fighter description",
-  "Monk": "Monk description",
-  "Paladin": "Paladin description",
-  "Ranger": "Ranger description",
-  "Rogue": "Rogue description",
-  "Sorceror": "Sorceror description",
-  "Warlock": "Warlock description",
-  "Wizard": "Wizard description"
-}
-
+import {ClassInfo} from './classInfo.js'
+import {RaceInfo} from './raceinfo.js'
 class DisplayInfo {
  
 
   static createClassInfo(classData) {
+    console.log(classData)
     let container = document.createElement("div");
-    let classTitle = document.createElement("h1");
-    classTitle.innerHTML = classData.name;
+
+    let classTitle = ClassInfo.title(classData);
     container.append(classTitle);
     
-    let description = document.createElement("p");
-    description.innerHTML = CLASS_DESCRIPTION[`${classData.name}`];
+    let description = ClassInfo.description(classData);
     container.append(description);
 
-    let proficiencies = document.createElement("div")
-    proficiencies.innerHTML = "Proficienicies"
+    let proficiencies = ClassInfo.proficiencies(classData);
     container.append(proficiencies)
-    let baseProficiencies = classData.proficiencies ;
-    for(let i = 0; i < baseProficiencies.length; i++) {
-      let prof = document.createElement("li");
-      prof.innerHTML = baseProficiencies[i].name;
-      proficiencies.append(prof);
-    } 
 
-    let bonusProfs = document.createElement("div");
-    bonusProfs.innerHTML = "Bonus Proficiencies(Choose 2)"
+    let bonusProfs = ClassInfo.bonusProficiencies(classData);
     container.append(bonusProfs)
-    let bonusChoices = classData.proficiency_choices[0].from
-    for(let i = 0; i < bonusChoices.length; i++) {
-      let prof = document.createElement("li");
-      prof.innerHTML = bonusChoices[i].name;
-      bonusProfs.append(prof);
-    } 
 
     return container
   }
@@ -52,23 +25,15 @@ class DisplayInfo {
   static createRaceInfo(raceData) {
     console.log(raceData)
     let container = document.createElement("div");
-    let raceName = document.createElement("h1");
-    raceName.innerHTML = raceData.name;
+
+    let raceName = RaceInfo.raceName(raceData);
     container.append(raceName);
     
-    let raceDescription = document.createElement("div");
+    let raceDescription = RaceInfo.raceDescription(raceData);
     container.append(raceDescription);
-    raceDescription.innerHTML = `${raceData.age + " " + raceData.alignment + " " + raceData.size_description + " " + raceData.language_desc}`
   
-    let traits = document.createElement("div");
-    traits.innerHTML = "List of race traits"
+    let traits = RaceInfo.raceTraits(raceData);
     container.append(traits);
-    raceData.traits.forEach(trait => {
-      let traitList = document.createElement("li");
-      traitList.innerHTML = trait.name
-      traits.append(traitList)
-    })
-
 
     return container
   }

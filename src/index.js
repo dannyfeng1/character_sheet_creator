@@ -1,13 +1,13 @@
 import {APIUtil} from './APIUtil.js';
 import {DisplayInfo} from './displayInfo.js'
+import { characterData } from './charData.js';
 
 document.addEventListener("DOMContentLoaded", function() {
-  // let rogueInfo = APIUtil.getClassInfo("rogue");
-  // console.log(rogueInfo)
   
   let basicButton = document.querySelector('#basic-info-button');
   let classButton = document.querySelector('#class-info-button')
-  
+
+  // Initial View
   const submitBasicInfo = (e) => {
     e.preventDefault();
     let basicInfo = document.querySelectorAll('.basic-info');
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   basicButton.addEventListener("click", submitBasicInfo)
-
+// Class form view and submission rendering
   const submitClassInfo = (e) => {
     e.preventDefault();
     let classInfo = document.querySelectorAll('.class-info')
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   classButton.addEventListener("click", submitClassInfo)
-  
+  // class info API request and display
   let classOptions = document.querySelectorAll(".class-select")
   const showClassInfo = (e) => {
     e.stopPropagation()
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
   classOptions.forEach(option => {
     option.addEventListener("click", showClassInfo);
   })
-
+// race information display
   let raceOptions = document.querySelectorAll(".race-select");
   const showRaceInfo = (e) => {
     e.stopPropagation();
@@ -78,4 +78,27 @@ document.addEventListener("DOMContentLoaded", function() {
   raceOptions.forEach(option => {
     option.addEventListener("click", showRaceInfo)
   })
+// full form submission. refactor to properly use form data submission
+  let createButton = document.querySelector("#race-info-button");
+
+  const submitCharForm = (e) => {
+    e.preventDefault();
+    let charOptions = {};
+    charOptions["name"] = document.querySelector("#characterName").value;
+    charOptions["age"] = document.querySelector("#characterAge").value;
+    document.querySelectorAll(".gender").forEach(genderRadio => {
+      if (genderRadio.checked) charOptions["gender"] = genderRadio.value
+    })
+    document.querySelectorAll(".class-select").forEach(classRadio => {
+      if (classRadio.checked) charOptions["class"] = classRadio.value
+    })
+    document.querySelectorAll(".race-select").forEach(raceRadio => {
+      if (raceRadio.checked) charOptions["race"] = raceRadio.value
+    })
+    
+    console.log(charOptions)
+    let charOb
+  }
+
+  createButton.addEventListener("click", submitCharForm)
 })
