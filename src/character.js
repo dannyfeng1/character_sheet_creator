@@ -1,4 +1,6 @@
 import { APIUtil } from "./APIUtil";
+import {ClassInfo} from "./classInfo"
+import { RaceInfo } from "./raceinfo";
 
 const ABILITY_SCORES = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
 
@@ -69,12 +71,12 @@ class Character {
 
   createSkillChecks() {
     let skillCheckData = APIUtil.getSkills();
-    let skillChecks = document.createElement("div");
-    skillChecks.setAttribute("id", "skill-checks");
 
+    let skillHTMLElements = document.createElement("div")
+    skillHTMLElements.innerHTML = "Skills"
+    skillHTMLElements.setAttribute("id", "skill-checks");
+    
     skillCheckData.then(skillCheckData => {
-      let skillHTMLElements = document.createElement("ul")
-      skillHTMLElements.innerHTML = "Skills"
       skillCheckData.results.forEach(skill => {
         let skillElement = document.createElement("li")
         fetch(`https://www.dnd5eapi.co${skill.url}`)
@@ -82,29 +84,53 @@ class Character {
         .then(skillData => {
           skillElement.innerHTML = `${skillData.name} ` + `(${skillData.ability_score.name})`
         })
-        skillElement.setAttribute("id", `${skill.name}`)
-        skillHTMLElements.append(skillElement)
+        skillElement.setAttribute("id", `${skill.name}`);
+        skillHTMLElements.append(skillElement);
       })
-      skillChecks.append(skillHTMLElements)
     })
-    return skillChecks
+    return skillHTMLElements;
   }
 
   createCharacterSheet() {
     // bunch of helper methods
     let container = document.createElement("div")
-
+    
     let basicInfo = this.createBasicInfo();
     container.append(basicInfo)
     basicInfo.setAttribute("id", "character-info")
     basicInfo.append(document.createElement("br"))
-
+    
     let statBlock = this.createStats();
     statBlock.setAttribute("id", "stat-block");
     container.append(statBlock);
+    
+    let skillChecks = this.createSkillChecks();
+    container.append(skillChecks);
+    
+    let classData = APIUtil.getClassInfo(`${this.class.toLowerCase()}`);
+    classData.then(classData => {
+      let classProfs = ClassInfo.proficiencies(classData);
+      classData.saving_throws.forEach(saveProf => {
+        let save = document.createElement("li")
+        save.innerHTML = `${saveProf.name} Saving Throws`
+        classProfs.append(save)
+      })
+      container.append(classProfs);
+    })
 
-    let skillChecks = this.createSkillChecks()
-    container.append(skillChecks)
+    let raceData = APIUtil.getRaceInfo(`${this.race.toLowerCase()}`);
+    let characterTraits = document.createElement("div");
+    characterTraits.innerHTML = "Race Traits and Features"
+    
+    raceData.then(raceData => {
+      raceData.traits.forEach(trait => {
+        let traitName = document.createElement("li");
+        traitName.innerHTML = trait.name;
+        characterTraits.append(traitName)
+      })
+    })
+    container.append(characterTraits)
+
     return container
   }
 }

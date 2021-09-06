@@ -9,7 +9,7 @@ const CLASS_DESCRIPTION = {
   "Paladin": "Paladin description",
   "Ranger": "Ranger description",
   "Rogue": "Rogue description",
-  "Sorceror": "Sorceror description",
+  "Sorcerer": "Sorcerer description",
   "Warlock": "Warlock description",
   "Wizard": "Wizard description"
 }
@@ -30,7 +30,7 @@ class ClassInfo {
 
   static proficiencies(classData) {
     let proficiencies = document.createElement("div")
-    proficiencies.innerHTML = "Proficienicies"
+    proficiencies.innerHTML = "Proficiencies"
     let baseProficiencies = classData.proficiencies ;
     for(let i = 0; i < baseProficiencies.length; i++) {
       let prof = document.createElement("li");
