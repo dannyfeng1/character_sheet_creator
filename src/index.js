@@ -1,6 +1,6 @@
 import {APIUtil} from './APIUtil.js';
 import {DisplayInfo} from './displayInfo.js'
-import { characterData } from './charData.js';
+import {Character} from './character.js';
 
 document.addEventListener("DOMContentLoaded", function() {
   
@@ -87,18 +87,29 @@ document.addEventListener("DOMContentLoaded", function() {
     charOptions["name"] = document.querySelector("#characterName").value;
     charOptions["age"] = document.querySelector("#characterAge").value;
     document.querySelectorAll(".gender").forEach(genderRadio => {
-      if (genderRadio.checked) charOptions["gender"] = genderRadio.value
+      if (genderRadio.checked) charOptions["gender"] = genderRadio.id
     })
     document.querySelectorAll(".class-select").forEach(classRadio => {
-      if (classRadio.checked) charOptions["class"] = classRadio.value
+      if (classRadio.checked) charOptions["class"] = classRadio.id
     })
     document.querySelectorAll(".race-select").forEach(raceRadio => {
-      if (raceRadio.checked) charOptions["race"] = raceRadio.value
+      if (raceRadio.checked) charOptions["race"] = raceRadio.id
     })
     
-    console.log(charOptions)
-    let charOb
+    let character = new Character(charOptions);
+    let characterSheet = character.createCharacterSheet();
+    console.log(characterSheet);
+
+    let sheetElement = document.querySelector("#character-sheet");
+    sheetElement.append(characterSheet);
+
+    let raceDisplay = document.querySelectorAll(".race-info")
+    raceDisplay.forEach(ele => {
+      ele.classList.add('hidden');
+    })
+
   }
 
   createButton.addEventListener("click", submitCharForm)
+
 })

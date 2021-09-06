@@ -6,14 +6,13 @@
  ## Functionality and MVPS
  With this application users will be able to:
   - Create a character through a guided process.
-  - Generate a character sheet.
-  - Add abilities and equipment to their characters.
-  - Roll dice with proper modifiers and bonuses.
+  - Generate a basic character sheet.
+  - Learn the basic mechanics of the D&D system through a tutorial.
 
 In addition, this application will include:
+  - Roll dice with proper modifiers and bonuses.
   - A character sheet that reacts to user edits and modifies itself.
-  - A character sheet with clickable elements that returns information to the user.
-  - A search feature for common equipment and spells.
+  - A character sheet with clickable elements that returns information.
   - A production README.
 
 ## Wireframes
@@ -33,8 +32,8 @@ The application will be built using:
 
 ## Implementation Timeline
   - 9/3-9/5: Set up project, including webpack and postman to get comfortable with D&D 5E API. Make character creation form. Render multiple forms that create each other. Access the API to get information regarding selected character creation options. Create Character class that will take form info. 
-  - 9/6: Create a CharacterSheet class that extrapolates info from Character object. Use the CharacterSheet class to generate HTML elements for a character sheet object to be rendered. Create a search feature that utilizes D&D 5E API for equipment and spells. Results can be added to the character sheet.
-  - 9/7: Make an information display box. Make each character sheet element clickable and return a description to the display box. Refactor this to be used in character creation form. Create a dice roller that displays results in the info box.
+  - 9/6: Create a basic character sheet that extrapolates info from Character object. Use the Character class to generate HTML elements for a character sheet to be rendered in HTML.
+  - 9/7: Make an information display box. Make each character sheet element clickable and return a description to the display box. Refactor this to be used in character creation form. Create a dice roller that displays results.
   - 9/8: Focus on styling.
   - 9/9: Deploy to GitHub pages
 
