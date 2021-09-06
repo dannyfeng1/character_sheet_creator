@@ -10,8 +10,8 @@
   - Learn the basic mechanics of the D&D system through a tutorial.
 
 In addition, this application will include:
-  - Roll dice with proper modifiers and bonuses.
-  - A character sheet that reacts to user edits and modifies itself.
+  - The ability to roll different types of dice.
+  - A display box that records user requested information.
   - A character sheet with clickable elements that returns information.
   - A production README.
 
