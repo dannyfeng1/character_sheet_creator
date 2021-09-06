@@ -1,4 +1,4 @@
-# D&D 5E Character Creator and Editor
+# D&D 5E Character Creator and Tutorial
 
 ## Background
   This application is a resource for Dungeons and Dragons Fifth Edition. D&D character creation is oftentimes one of the most overwhelming experiences for first time players. There are so many options and possibilities to explore due to the fantasy nature and large world of DnD. This application will streamline the character creation process by providing the user with digestable amounts of information in a step by step process. After creation, an interactable character sheet and a short text-based adventure will teach new players the basics of Dungeons and Dragons.
@@ -40,5 +40,5 @@ The application will be built using:
 ## Bonus Features
 Features that could be added in the future: 
   - A way to export the character sheet so users can save them.
-  - Multi classing options.
+  - Search bar for D&D resources.
   - Combatant creation.
