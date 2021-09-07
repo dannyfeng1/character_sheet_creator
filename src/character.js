@@ -36,23 +36,30 @@ class Character {
 
   createStats() {
     let statBlock = document.createElement("div");
-    let hitPoints = document.createElement("div");
-    hitPoints.innerHTML = "HP: 13"
+    let hitPoints = document.createElement("button");
+    hitPoints.innerHTML = "Hit Points(HP): 13"
+    hitPoints.setAttribute("id", "hit-points")
     statBlock.append(hitPoints)
-    let armorClass = document.createElement("div")
-    armorClass.innerHTML = "AC: 14"
+    let armorClass = document.createElement("button")
+    armorClass.innerHTML = "Armor Class(AC): 14"
+    armorClass.setAttribute("id", "armor-class")
     statBlock.append(armorClass)
-    let prof = document.createElement("div")
+    let prof = document.createElement("button")
     prof.innerHTML = "Proficiency Bonus: +2"
+    prof.setAttribute("id", "proficiency-bonus")
     statBlock.append(prof)
     statBlock.append(document.createElement("br"))
+    statBlock.append(document.createElement("br"))
+    let statElement = document.createElement("div");
+    statElement.setAttribute("id", "saving-throws");
+    statElement.innerHTML = "Ability Scores and Modifiers"
 
     const statAndMod = function(stat) {
-      let statElement = document.createElement("div");
-      statElement.setAttribute("id", "saving-throws")
       let randomStat = Math.floor(Math.random() *6) + 10;
 
-      let statValue = document.createElement("div");
+      let statValue = document.createElement("button");
+      statValue.classList.add("saving-throw")
+      statValue.setAttribute("data-abilityAPI", `${stat.toLowerCase()}`)
       statValue.setAttribute("data-stat-value", `${randomStat}`)
       statValue.innerHTML = stat + `: ${randomStat} ` + `(+${Math.floor((randomStat - 10) / 2)})`;
       statValue.setAttribute("data-stat-mod", `${Math.floor((randomStat - 10) / 2)}`)
@@ -78,13 +85,14 @@ class Character {
     
     skillCheckData.then(skillCheckData => {
       skillCheckData.results.forEach(skill => {
-        let skillElement = document.createElement("li")
+        let skillElement = document.createElement("button")
+        skillElement.classList.add("skill-check")
         fetch(`https://www.dnd5eapi.co${skill.url}`)
         .then(skillInfo => { return skillInfo.json() })
         .then(skillData => {
           skillElement.innerHTML = `${skillData.name} ` + `(${skillData.ability_score.name})`
         })
-        skillElement.setAttribute("id", `${skill.name}`);
+        skillElement.setAttribute("data-skillAPI", `${skill.index}`);
         skillHTMLElements.append(skillElement);
       })
     })
@@ -118,18 +126,18 @@ class Character {
       container.append(classProfs);
     })
 
-    let raceData = APIUtil.getRaceInfo(`${this.race.toLowerCase()}`);
-    let characterTraits = document.createElement("div");
-    characterTraits.innerHTML = "Race Traits and Features"
+    // let raceData = APIUtil.getRaceInfo(`${this.race.toLowerCase()}`);
+    // let characterTraits = document.createElement("div");
+    // characterTraits.innerHTML = "Race Traits and Features"
     
-    raceData.then(raceData => {
-      raceData.traits.forEach(trait => {
-        let traitName = document.createElement("li");
-        traitName.innerHTML = trait.name;
-        characterTraits.append(traitName)
-      })
-    })
-    container.append(characterTraits)
+    // raceData.then(raceData => {
+    //   raceData.traits.forEach(trait => {
+    //     let traitName = document.createElement("li");
+    //     traitName.innerHTML = trait.name;
+    //     characterTraits.append(traitName)
+    //   })
+    // })
+    // container.append(characterTraits)
 
     return container
   }

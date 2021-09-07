@@ -80,8 +80,8 @@
           <label for="Half-elf">Half-elf</label><br>
           <input type="radio" id="Half-orc" class="race-select" name="race" value="half-orc">
           <label for="Half-orc">Half-orc</label><br>
-          <input type="radio" id="Halfing" class="race-select" name="race" value="halfling">
-          <label for="Halfing">Halfling</label><br>
+          <input type="radio" id="Halfling" class="race-select" name="race" value="halfling">
+          <label for="Halfling">Halfling</label><br>
           <input type="radio" id="Human" class="race-select" name="race" value="human">
           <label for="Human">Human</label><br>
           <input type="radio" id="Tiefling" class="race-select" name="race" value="tiefling">
@@ -95,9 +95,25 @@
 
     </div>
     <div id="display-box">
-      <div id="basic-display" class="basic-info form-display">Introduction to program and basic instructions</div>
+      <div id="basic-display" class="basic-info">
+        <h2>Welcome to the Dunegon and Dragons 5th Edition Character Creator!</h2>
+        <p>This application was created to guide new players through the wonder but complicated game that is Dungeons and Dragons.</p>
+        <p>Character creation is often an overwhelming process for new players as there are so many customizable options due to the fantasy nature of D&D.</p>
+        <p>Hopefully this application will streamline character creation by providing the user with digestible information.</p>
+        <p>After the user has submitted the character creation form, a simple character sheet with random stats will be generated for you.</p>
+        <p>Keep in mind that stat distributions will vary depending on the type of character you want to play.</p>
+        <p>Ask your Dungeon Master for more guidance when you begin your first adventure!</p>
+        <br>
+        <p>On the character sheet will be interactable elements that will return information when clicked on!</p>
+        <p>In addition, a brief tutorial will begin that will guide the user through the basic D&D mechanics.</p>
+        <p>I hope this application will ease the transition into the wonderful role playing game, Dungeons and Dragons.</p>
+        <p>I wish everyone the best on their first campaign!</p>
+      </div>
       <div id="class-display"class="class-info hidden">Class information from API. Kissies for Kent</div>
       <div id="race-display"class="race-info hidden">Race info from API</div>
+      <div id="tutorial" class="sheet-display hidden">Tutorial Text</div>
+      <h2 class="hidden sheet-display">Scroll of Approximate Knowledge of All Things</h1>
+      <div id="info-dice-box" class ="sheet-display hidden"></div>
     </div>
 
   </div>
