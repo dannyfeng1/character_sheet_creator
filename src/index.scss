@@ -1,8 +1,156 @@
-.form-display {
-  display: flex;
-  flex-direction: column;
+.form-display, #display-box {
+  display: inline-block;
+  // border: 1px solid black;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  color: crimson;
+  // background-color: lightgrey;
+  border-radius: 30px;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+  font-size: 50px;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/originals/7c/f7/49/7cf7492d074dedafb226f7d69b3ea7df.jpg);
+  background-size: 100% 100%;
+}
+
+.char-generator {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  padding-left: 5%;
+  // padding: 30px;
+}
+
+#display-box {
+  width: 30%;
+  padding-left: 8%;
+  padding-right: 3%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+// #char-form {
+//   width: 250px;
+// }
+
+.race-info {
+  width: 400px;
+  height: 800px;
+}
+
+.class-info {
+  width: 400px;
+  height: 800px;
+}
+
+.basic-info {
+  width: 400px;
+  height: 800px;
+  vertical-align: bottom;
+  
+}
+
+#character-sheet {
+  // width: 30%;
+  // height: 800px;
+}
+
+#dice-box {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 800px;  
 }
 
 .hidden {
   display: none;
+}
+
+button {
+  font-size: 16px;
+    letter-spacing: 2px;
+    background-color: brown;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border: 0px;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s 0s ease-in-out;
+}
+
+#saving-throws {
+  display: flex;
+}
+
+#skill-checks {
+  display: inline-flex;
+  padding-bottom: 5%;
+  font-family: 'Architects Daughter', cursive;
+  font-size: x-large;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+h2 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: xx-large;
+}
+
+#ability-header, #skill-header {
+  font-family: 'Architects Daughter', cursive;
+  font-size: x-large;
+}
+
+input[type=text] {
+  font-family: 'Architects Daughter', cursive;
+  font-size: large;
+}
+
+label {
+  font-family: 'Architects Daughter', cursive;
+  font-size: large;
+}
+
+p {
+  font-family: 'Architects Daughter', cursive;
+  font-size: large;
+}
+
+#character-info p {
+  font-size: large;
+}
+
+div {
+  font-family: 'Architects Daughter', cursive;
+  font-size: medium;
+}
+
+footer {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  place-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+footer button {
+  padding: 10px;
+}
+
+iframe {
+  border: 20px inset saddlebrown
+}
+
+button:hover {
+      transform: scale(1.04, 1);
+    background-color: rgb(160, 14, 26);
+    text-decoration: none;
 }

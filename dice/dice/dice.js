@@ -279,7 +279,7 @@
     this.dice_color = '#202020';
     this.ambient_light_color = 0xf0f5fb;
     this.spot_light_color = 0xefdfd5;
-    this.selector_back_colors = { color: 0x404040, shininess: 0, emissive: 0x858787 };
+    this.selector_back_colors = { color: 0xffffff, shininess: 0, emissive: 0x858787 };
     this.desk_color = 0xdfdfdf;
     this.use_shadows = true;
 

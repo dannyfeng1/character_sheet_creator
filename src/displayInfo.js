@@ -29,7 +29,7 @@ class DisplayInfo {
     
     let raceDescription = RaceInfo.raceDescription(raceData);
     container.append(raceDescription);
-  
+
     let traits = RaceInfo.raceTraits(raceData);
     container.append(traits);
 

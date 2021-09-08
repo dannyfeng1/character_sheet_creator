@@ -16,7 +16,7 @@ const CLASS_DESCRIPTION = {
 class ClassInfo {
 
   static title(classData) {
-    let classTitle = document.createElement("h1");
+    let classTitle = document.createElement("h2");
     classTitle.innerHTML = classData.name;
     return classTitle
   }

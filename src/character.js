@@ -18,15 +18,15 @@ class Character {
   createBasicInfo() {
     let basicInfo = document.createElement("div");
 
-    let name = document.createElement("div");
+    let name = document.createElement("p");
     name.innerHTML = `Name: ${this.name}`;
-    let age = document.createElement("div");
+    let age = document.createElement("p");
     age.innerHTML = `Age: ${this.age}`;
-    let gender = document.createElement("div");
+    let gender = document.createElement("p");
     gender.innerHTML = `Gender: ${this.gender}`;
-    let charClass = document.createElement("div");
+    let charClass = document.createElement("p");
     charClass.innerHTML = `Class: ${this.class}`;
-    let race = document.createElement("div");
+    let race = document.createElement("p");
     race.innerHTML = `Race: ${this.race}`;
 
     basicInfo.append(name, age, gender, charClass, race)
@@ -40,19 +40,27 @@ class Character {
     hitPoints.innerHTML = "Hit Points(HP): 13/13"
     hitPoints.setAttribute("id", "hit-points")
     statBlock.append(hitPoints)
+    statBlock.append(document.createElement("br"))
+    
     let armorClass = document.createElement("button")
     armorClass.innerHTML = "Armor Class(AC): 14"
     armorClass.setAttribute("id", "armor-class")
     statBlock.append(armorClass)
+    statBlock.append(document.createElement("br"))
+
     let prof = document.createElement("button")
     prof.innerHTML = "Proficiency Bonus: +2"
     prof.setAttribute("id", "proficiency-bonus")
     statBlock.append(prof)
     statBlock.append(document.createElement("br"))
     statBlock.append(document.createElement("br"))
+    let abilityHeader = document.createElement("div")
+    abilityHeader.innerHTML = "<strong>Ability Scores and Modifiers</strong>"
+    abilityHeader.setAttribute("id", "ability-header")
+    statBlock.append(abilityHeader)
     let statElement = document.createElement("div");
     statElement.setAttribute("id", "saving-throws");
-    statElement.innerHTML = "Ability Scores and Modifiers"
+    statElement.append(document.createElement("br"))
 
     const statAndMod = function(stat) {
       let randomStat = Math.floor(Math.random() *6) + 10;
@@ -65,6 +73,8 @@ class Character {
       statValue.setAttribute("data-stat-mod", `${Math.floor((randomStat - 10) / 2)}`)
 
       statElement.append(statValue)
+      statElement.append(document.createElement("br"))
+
       return statElement
     }
 
@@ -80,7 +90,6 @@ class Character {
     let skillCheckData = APIUtil.getSkills();
 
     let skillHTMLElements = document.createElement("div")
-    skillHTMLElements.innerHTML = "Skills"
     skillHTMLElements.setAttribute("id", "skill-checks");
     
     skillCheckData.then(skillCheckData => {
@@ -101,7 +110,10 @@ class Character {
 
   createCharacterSheet() {
     // bunch of helper methods
-    let container = document.createElement("div")
+    let container = document.createElement("div");
+    let sheetHeader = document.createElement("h2");
+    sheetHeader.innerHTML = "Character Sheet"
+    container.append(sheetHeader)
     
     let basicInfo = this.createBasicInfo();
     container.append(basicInfo)
@@ -112,6 +124,10 @@ class Character {
     statBlock.setAttribute("id", "stat-block");
     container.append(statBlock);
     
+    let skillHeader = document.createElement("div");
+    skillHeader.setAttribute("id", "skill-header");
+    skillHeader.innerHTML = "<strong>Skills</strong>"
+    container.append(skillHeader)
     let skillChecks = this.createSkillChecks();
     container.append(skillChecks);
     

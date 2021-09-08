@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
       classDisplay.innerHTML = "";
       let classDisplayInfo = DisplayInfo.createClassInfo(classData);
       classDisplay.append(classDisplayInfo);
+      classDisplay.append(document.createElement("br"))
     })
   }
 
@@ -118,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function() {
   function addToSheetInfo(element) {
     let sheetInfo = document.querySelector("#info-box");
 
-    if (sheetInfo.childElementCount >= 5) {
-      let firstInfo = sheetInfo.childNodes[1]
+    if (sheetInfo.childElementCount > 2) {
+      let firstInfo = sheetInfo.childNodes[0]
       firstInfo.remove()
       sheetInfo.append(element)
     } else {
@@ -206,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const farmerSuccess = (e) => {
     tutorialHead.innerHTML = "You succesfully convinced him to give you the location of the inn!";
-    tutorialText.innerHTML = "The difficulty class of convincing the farmer was 10, meaning you had to meet or beat 10 in order for your action to succeed. You make your way towards the Fallbrook Inn, the farmer informed you that it's approximately an hour away.";
+    tutorialText.innerHTML = "The farmer jumps up, addresses you, and answers your questions. The difficulty class of convincing the farmer was 10, meaning you had to meet or beat 10 in order for your action to succeed. You make your way towards Fallbrook Inn, the farmer informed you that it's approximately an hour east of here.";
     tutorialInstructions.innerHTML = "Roll a perception check as you travel on the main road. Roll a d20 and add your wisdom modifier to it. Did you roll higher than a 14?"
 
     successOne.classList.add("hidden");
