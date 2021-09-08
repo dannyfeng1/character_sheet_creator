@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
   createButton.addEventListener("click", submitCharForm)
 
   function addToSheetInfo(element) {
-    let sheetInfo = document.querySelector("#info-dice-box");
+    let sheetInfo = document.querySelector("#info-box");
 
     if (sheetInfo.childElementCount >= 5) {
       let firstInfo = sheetInfo.childNodes[1]
