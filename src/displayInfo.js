@@ -4,7 +4,6 @@ class DisplayInfo {
  
 
   static createClassInfo(classData) {
-    console.log(classData)
     let container = document.createElement("div");
 
     let classTitle = ClassInfo.title(classData);
@@ -23,7 +22,6 @@ class DisplayInfo {
   }
 
   static createRaceInfo(raceData) {
-    console.log(raceData)
     let container = document.createElement("div");
 
     let raceName = RaceInfo.raceName(raceData);

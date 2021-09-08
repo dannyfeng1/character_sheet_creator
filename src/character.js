@@ -37,7 +37,7 @@ class Character {
   createStats() {
     let statBlock = document.createElement("div");
     let hitPoints = document.createElement("button");
-    hitPoints.innerHTML = "Hit Points(HP): 13"
+    hitPoints.innerHTML = "Hit Points(HP): 13/13"
     hitPoints.setAttribute("id", "hit-points")
     statBlock.append(hitPoints)
     let armorClass = document.createElement("button")
@@ -115,16 +115,16 @@ class Character {
     let skillChecks = this.createSkillChecks();
     container.append(skillChecks);
     
-    let classData = APIUtil.getClassInfo(`${this.class.toLowerCase()}`);
-    classData.then(classData => {
-      let classProfs = ClassInfo.proficiencies(classData);
-      classData.saving_throws.forEach(saveProf => {
-        let save = document.createElement("li")
-        save.innerHTML = `${saveProf.name} Saving Throws`
-        classProfs.append(save)
-      })
-      container.append(classProfs);
-    })
+    // let classData = APIUtil.getClassInfo(`${this.class.toLowerCase()}`);
+    // classData.then(classData => {
+    //   let classProfs = ClassInfo.proficiencies(classData);
+    //   classData.saving_throws.forEach(saveProf => {
+    //     let save = document.createElement("li")
+    //     save.innerHTML = `${saveProf.name} Saving Throws`
+    //     classProfs.append(save)
+    //   })
+    //   container.append(classProfs);
+    // })
 
     // let raceData = APIUtil.getRaceInfo(`${this.race.toLowerCase()}`);
     // let characterTraits = document.createElement("div");
