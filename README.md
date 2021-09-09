@@ -1,4 +1,5 @@
 # D&D 5E Character Creator and Tutorial
+## [Demo is now live!](https://dannyfeng1.github.io/dnd_for_newcomers/)
 
 ## Background
   This application is a resource for Dungeons and Dragons Fifth Edition. D&D character creation is oftentimes one of the most overwhelming experiences for first time players. There are so many options and possibilities to explore due to the fantasy nature and large world of DnD. This application will streamline the character creation process by providing the user with digestable amounts of information in a step by step process. After creation, an interactable character sheet and a short text-based adventure will teach new players the basics of Dungeons and Dragons.
@@ -13,7 +14,6 @@ In addition, this application will include:
   - The ability to roll different types of dice.
   - A display box that records user requested information.
   - A character sheet with clickable elements that returns information.
-  - A production README.
 
 ## Wireframes
 ![image](https://user-images.githubusercontent.com/86497399/131964592-d2ed364f-a1c5-4e82-a039-be7eab69ab24.png)
@@ -26,7 +26,7 @@ In addition, this application will include:
 The application will be built using: 
   - npm to manage project dependencies.
   - [The D&D 5th edition API](http://www.dnd5eapi.co/) to access a directory of D&D information.
-  - 3JS for creating dice models.
+  - 3JS for loading dice models from [this dice rolling program by Anton Natarov](http://www.teall.info/2014/01/online-3d-dice-roller.html)
   - Javascript for underlying logic of the program.
   - HTML/CSS to style the program for a better user experience.
 
@@ -39,6 +39,8 @@ The application will be built using:
 
 ## Bonus Features
 Features that could be added in the future: 
-  - A way to export the character sheet so users can save them.
-  - Search bar for D&D resources.
-  - Combatant creation.
+  - Images that will display when options are selected.
+  - A more robust tutorial of the mechanics.
+  - A tutorial for rolling base ability scores.
+  - A resource list for new players.
+  - 
