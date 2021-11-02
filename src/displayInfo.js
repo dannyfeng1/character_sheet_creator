@@ -12,11 +12,16 @@ class DisplayInfo {
     let description = ClassInfo.description(classData);
     container.append(description);
 
+    let allProficiencies = document.createElement("div")
+    allProficiencies.className = "all-proficiencies"
+    container.append(allProficiencies)
+
     let proficiencies = ClassInfo.proficiencies(classData);
-    container.append(proficiencies)
+    allProficiencies.append(proficiencies)
 
     let bonusProfs = ClassInfo.bonusProficiencies(classData);
-    container.append(bonusProfs)
+    allProficiencies.append(bonusProfs)
+
 
     return container
   }

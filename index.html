@@ -29,126 +29,129 @@
 
 <body>
   <h1>Dungeons and Dragons 5th Edition Character Creator</h1>
-  <div class="char-generator">
-    <form action="" id="char-form">
-      <div class="basic-info form-display">
-        <h2>Character Information</h2>
-        <label>Name:
-          <input type="text" id="characterName">
-        </label>
-        <br>
-        <br>
-        <label>Age:  &nbsp;
-          <input type="text" id="characterAge">
-        </label>
-      <br>
-      <br>
-      <label>Gender:
-        <br>
-        <input type="radio" id="Male" name= "gender" class="gender" value="male">
-        <label for="Male">Male</label><br>
-        <input type="radio" id="Female" name= "gender" class="gender" value="female">
-        <label for="Female">Female</label><br>
-        <input type="radio" id="Other" name= "gender" class="gender" value="other">
-        <label for="Other">Other</label>
-      </label>
-      <br>
-      <br>
-      <button id="basic-info-button">Next</button>
-    </div>
-    <div id="class-options" class="class-info hidden">
-      <h2>Class Options:</h2>
-        <input type="radio" id="Barbarian" class="class-select" name="class" value="barbarian">
-        <label for="Barbarian">Barbarian</label><br>
-        <input type="radio" id="Bard" class="class-select" name="class" value="bard">
-        <label for="Bard">Bard</label><br>
-        <input type="radio" id="Cleric" class="class-select" name="class" value="cleric">
-        <label for="Cleric">Cleric</label><br>
-        <input type="radio" id="Druid" class="class-select" name="class" value="druid">
-        <label for="Druid">Druid</label><br>
-        <input type="radio" id="Fighter" class="class-select" name="class" value="fighter">
-        <label for="Fighter">Fighter</label><br>
-        <input type="radio" id="Monk" class="class-select" name="class" value="monk">
-        <label for="Monk">Monk</label><br>
-        <input type="radio" id="Paladin" class="class-select" name="class" value="paladin">
-        <label for="Paladin">Paladin</label><br>
-        <input type="radio" id="Ranger" class="class-select" name="class" value="ranger">
-        <label for="Ranger">Ranger</label><br>
-        <input type="radio" id="Rogue" class="class-select" name="class" value="rogue">
-        <label for="Rogue">Rogue</label><br>
-        <input type="radio" id="Sorcerer" class="class-select" name="class" value="sorcerer">
-        <label for="Sorcerer">Sorcerer</label><br>
-        <input type="radio" id="Warlock" class="class-select" name="class" value="warlock">
-        <label for="Warlock">Warlock</label><br>
-        <input type="radio" id="Wizard" class="class-select" name="class" value="wizard">
-        <label for="Wizard">Wizard</label>
-    <br>
-    <br>
-    <button id="class-info-button">Next</button>
-    </div>
-    <div class="race-info hidden">
-      <h2>Race Options</h2>
-        <input type="radio" id="Dragonborn" class="race-select" name="race" value="dragonborn">
-        <label for="Dragonborn">Dragonborn</label><br>
-        <input type="radio" id="Dwarf" class="race-select" name="race" value="dwarf">
-        <label for="Dwarf">Dwarf</label><br>
-        <input type="radio" id="Elf" class="race-select" name="race" value="elf">
-        <label for="Elf">Elf</label><br>
-        <input type="radio" id="Gnome" class="race-select" name="race" value="gnome">
-        <label for="Gnome">Gnome</label><br>
-        <input type="radio" id="Half-elf" class="race-select" name="race" value="half-elf">
-        <label for="Half-elf">Half-elf</label><br>
-        <input type="radio" id="Half-orc" class="race-select" name="race" value="half-orc">
-        <label for="Half-orc">Half-orc</label><br>
-        <input type="radio" id="Halfling" class="race-select" name="race" value="halfling">
-        <label for="Halfling">Halfling</label><br>
-        <input type="radio" id="Human" class="race-select" name="race" value="human">
-        <label for="Human">Human</label><br>
-        <input type="radio" id="Tiefling" class="race-select" name="race" value="tiefling">
-        <label for="Tiefling">Tiefling</label><br>
-      <br>
-      <button id="race-info-button">Create Character!</button>
-    </div>
-    </form>
-    <div id="character-sheet"></div>
 
-    </div>
-    <div id="display-box">
-      <div id="basic-display" class="basic-info">
-        <h2>Welcome to the Dungeon and Dragons 5th Edition Character Creator!</h2>
-        <p>This application was created to guide new players through the wonderful but complicated game that is Dungeons and Dragons. Character creation is often an overwhelming process for new players as there are so many customizable options due to the fantasy nature of D&D. Hopefully this application will streamline character creation by providing the user with digestible information. After the user has submitted the character creation form, a simple character sheet with random stats will be generated for you. Keep in mind that stat distributions will vary depending on the type of character you want to play. Ask your Dungeon Master for more guidance when you begin your first adventure! On the character sheet will be interactable elements that will return information when clicked on! In addition, a brief tutorial will begin that will guide the user through the basic D&D mechanics. I hope this application will ease the transition into the wonderful role playing game, Dungeons and Dragons. I wish everyone the best on their first campaign!</p>
+  <div id="overall-container">
+    <div class="char-generator">
+      <form action="" id="char-form">
+        <div class="basic-info form-display">
+          <h2>Character Information</h2>
+          <label>Name:
+            <input type="text" id="characterName">
+          </label>
+          <br>
+          <br>
+          <label>Age:  &nbsp;
+            <input type="text" id="characterAge">
+          </label>
+        <br>
+        <br>
+        <label>Gender:
+          <br>
+          <input type="radio" id="Male" name= "gender" class="gender" value="male">
+          <label for="Male">Male</label><br>
+          <input type="radio" id="Female" name= "gender" class="gender" value="female">
+          <label for="Female">Female</label><br>
+          <input type="radio" id="Other" name= "gender" class="gender" value="other">
+          <label for="Other">Other</label>
+        </label>
+        <br>
+        <br>
+        <button id="basic-info-button">Next</button>
       </div>
-      <div id="class-display"class="class-info hidden">
-        <h2>Instructions</h2>
-        <p>The first step of creating your character is to decide what class you would like to play. Selecting an option will update the display to give a brief description of the class and its features. Class stereotypes can give inspiration for how you want to play your character, whether it's a massive brute, a charming performer, or a bookworm. I encourage you to explore the options listed!</p> 
+      <div id="class-options" class="class-info hidden">
+        <h2>Class Options:</h2>
+          <input type="radio" id="Barbarian" class="class-select" name="class" value="barbarian">
+          <label for="Barbarian">Barbarian</label><br>
+          <input type="radio" id="Bard" class="class-select" name="class" value="bard">
+          <label for="Bard">Bard</label><br>
+          <input type="radio" id="Cleric" class="class-select" name="class" value="cleric">
+          <label for="Cleric">Cleric</label><br>
+          <input type="radio" id="Druid" class="class-select" name="class" value="druid">
+          <label for="Druid">Druid</label><br>
+          <input type="radio" id="Fighter" class="class-select" name="class" value="fighter">
+          <label for="Fighter">Fighter</label><br>
+          <input type="radio" id="Monk" class="class-select" name="class" value="monk">
+          <label for="Monk">Monk</label><br>
+          <input type="radio" id="Paladin" class="class-select" name="class" value="paladin">
+          <label for="Paladin">Paladin</label><br>
+          <input type="radio" id="Ranger" class="class-select" name="class" value="ranger">
+          <label for="Ranger">Ranger</label><br>
+          <input type="radio" id="Rogue" class="class-select" name="class" value="rogue">
+          <label for="Rogue">Rogue</label><br>
+          <input type="radio" id="Sorcerer" class="class-select" name="class" value="sorcerer">
+          <label for="Sorcerer">Sorcerer</label><br>
+          <input type="radio" id="Warlock" class="class-select" name="class" value="warlock">
+          <label for="Warlock">Warlock</label><br>
+          <input type="radio" id="Wizard" class="class-select" name="class" value="wizard">
+          <label for="Wizard">Wizard</label>
+      <br>
+      <br>
+      <button id="class-info-button">Next</button>
       </div>
-      <div id="race-display"class="race-info hidden">
-        <h2>Instructions</h2>
-        <p>The next step is to decide what race you would like to play as. Each of the races has specific traits and features that will enhance your gameplay. Some of these traits will be great in combat, social interactions or both! Races will also passively increase some ability scores. This is mainly useful for optimizing your character's stats, but as first time players, I would not worry about this. Play whatever race you think is cool!</p>
+      <div class="race-info hidden">
+        <h2>Race Options</h2>
+          <input type="radio" id="Dragonborn" class="race-select" name="race" value="dragonborn">
+          <label for="Dragonborn">Dragonborn</label><br>
+          <input type="radio" id="Dwarf" class="race-select" name="race" value="dwarf">
+          <label for="Dwarf">Dwarf</label><br>
+          <input type="radio" id="Elf" class="race-select" name="race" value="elf">
+          <label for="Elf">Elf</label><br>
+          <input type="radio" id="Gnome" class="race-select" name="race" value="gnome">
+          <label for="Gnome">Gnome</label><br>
+          <input type="radio" id="Half-elf" class="race-select" name="race" value="half-elf">
+          <label for="Half-elf">Half-elf</label><br>
+          <input type="radio" id="Half-orc" class="race-select" name="race" value="half-orc">
+          <label for="Half-orc">Half-orc</label><br>
+          <input type="radio" id="Halfling" class="race-select" name="race" value="halfling">
+          <label for="Halfling">Halfling</label><br>
+          <input type="radio" id="Human" class="race-select" name="race" value="human">
+          <label for="Human">Human</label><br>
+          <input type="radio" id="Tiefling" class="race-select" name="race" value="tiefling">
+          <label for="Tiefling">Tiefling</label><br>
+        <br>
+        <button id="race-info-button">Create Character!</button>
       </div>
-      <div id="tutorial" class="sheet-display hidden">
-        <h2 id="tutorial-head">Begin your first adventure!</h2>
-        <p id="tutorial-text">You arrive at a farm far from any town and see a half-asleep farmer on his porch. You get his attention and he awakens, obviously upset you had interrupted his afternoon nap. He ignores you and tilts his hat down over his eyes and goes back to sleep.</p>
-        <p id="tutorial-instruction">Would you like to get his attention by intimidation or through your charming personality?</p>
-        <button id="farmer-one">Intimidate Him</button>
-        <button id="farmer-two">Persuade Him</button>
-        <button id="success-one" class="hidden first-roll">Yes</button>
-        <button id="fail-one" class="hidden first-roll">No</button>
-        <button id="success-two" class="hidden second-roll">Yes</button>
-        <button id="fail-two" class="hidden second-roll">No</button>
-        <button id="combat-one-success" class="hidden ranged-combat">The knife hits the goblin in the shoulder.</button>
-        <button id="combat-one-fail" class="hidden ranged-combat">The knife whizzes past the goblin's head.</button>
-        <button id="damage-kill" class="hidden knife-damage">A 5+! The goblin bleeds out and dies.</button>
-        <button id="damage-surrender" class="hidden knife-damage">The goblin blubbers for mercy and passes out.</button>
-        <button id="combat-two-success" class="hidden second-attack">The goblin is hit!</button>
-        <button id="combat-two-fail" class="hidden second-attack">The goblin dodges!</button>
-        <button id="finish-tutorial" class="hidden">Rest at the inn and finish tutorial!</button>
+      </form>
+      <div id="character-sheet"></div>
+  
       </div>
-      <h2 class="hidden sheet-display">Scroll of Approximate Knowledge of All Things</h2>
-      <div id="info-box" class ="sheet-display hidden"></div>
-    </div>
-    <div id="dice-box" class="hidden sheet-display">
-      <iframe src="dice/dice/index.html" frameborder="1" style="height: 400px; width:400px"></iframe>
+      <div id="display-box">
+        <div id="basic-display" class="basic-info">
+          <h2>Welcome to the Dungeon and Dragons 5th Edition Character Creator!</h2>
+          <p>This application was created to guide new players through the wonderful but complicated game that is Dungeons and Dragons. Character creation is often an overwhelming process for new players as there are so many customizable options due to the fantasy nature of D&D. Hopefully this application will streamline character creation by providing the user with digestible information. After the user has submitted the character creation form, a simple character sheet with random stats will be generated for you. Keep in mind that stat distributions will vary depending on the type of character you want to play. Ask your Dungeon Master for more guidance when you begin your first adventure! On the character sheet will be interactable elements that will return information when clicked on! In addition, a brief tutorial will begin that will guide the user through the basic D&D mechanics. I hope this application will ease the transition into the wonderful role playing game, Dungeons and Dragons. I wish everyone the best on their first campaign!</p>
+        </div>
+        <div id="class-display"class="class-info hidden">
+          <h2>Instructions</h2>
+          <p>The first step of creating your character is to decide what class you would like to play. Selecting an option will update the display to give a brief description of the class and its features. Class stereotypes can give inspiration for how you want to play your character, whether it's a massive brute, a charming performer, or a bookworm. I encourage you to explore the options listed!</p> 
+        </div>
+        <div id="race-display"class="race-info hidden">
+          <h2>Instructions</h2>
+          <p>The next step is to decide what race you would like to play as. Each of the races has specific traits and features that will enhance your gameplay. Some of these traits will be great in combat, social interactions or both! Races will also passively increase some ability scores. This is mainly useful for optimizing your character's stats, but as first time players, I would not worry about this. Play whatever race you think is cool!</p>
+        </div>
+        <div id="tutorial" class="sheet-display hidden">
+          <h2 id="tutorial-head">Begin your first adventure!</h2>
+          <p id="tutorial-text">You arrive at a farm far from any town and see a half-asleep farmer on his porch. You get his attention and he awakens, obviously upset you had interrupted his afternoon nap. He ignores you and tilts his hat down over his eyes and goes back to sleep.</p>
+          <p id="tutorial-instruction">Would you like to get his attention by intimidation or through your charming personality?</p>
+          <button id="farmer-one">Intimidate Him</button>
+          <button id="farmer-two">Persuade Him</button>
+          <button id="success-one" class="hidden first-roll">Yes</button>
+          <button id="fail-one" class="hidden first-roll">No</button>
+          <button id="success-two" class="hidden second-roll">Yes</button>
+          <button id="fail-two" class="hidden second-roll">No</button>
+          <button id="combat-one-success" class="hidden ranged-combat">The knife hits the goblin in the shoulder.</button>
+          <button id="combat-one-fail" class="hidden ranged-combat">The knife whizzes past the goblin's head.</button>
+          <button id="damage-kill" class="hidden knife-damage">A 5+! The goblin bleeds out and dies.</button>
+          <button id="damage-surrender" class="hidden knife-damage">The goblin blubbers for mercy and passes out.</button>
+          <button id="combat-two-success" class="hidden second-attack">The goblin is hit!</button>
+          <button id="combat-two-fail" class="hidden second-attack">The goblin dodges!</button>
+          <button id="finish-tutorial" class="hidden">Rest at the inn and finish tutorial!</button>
+        </div>
+        <h2 class="hidden sheet-display">Scroll of Approximate Knowledge of All Things</h2>
+        <div id="info-box" class ="sheet-display hidden"></div>
+      </div>
+      <div id="dice-box" class="hidden sheet-display">
+        <iframe src="dice/dice/index.html" frameborder="1" style="height: 400px; width:400px"></iframe>
+      </div>
     </div>
   </div>
 

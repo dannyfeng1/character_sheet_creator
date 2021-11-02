@@ -18,12 +18,22 @@ body {
   position: relative;
 }
 
+#overall-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .char-generator {
   display: inline-block;
   width: 20%;
   height: 100%;
   padding-left: 5%;
   // padding: 30px;
+}
+
+.all-proficiencies {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #display-box {

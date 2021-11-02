@@ -6,11 +6,11 @@
 }
 
 h1 {
-  font-family: 'MedievalSharp', cursive;
+  font-family: "Architects Daughter", cursive;
   color: crimson;
   border-radius: 30px;
   text-align: center;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px gray;
   font-size: 50px;
 }
 
@@ -19,11 +19,21 @@ body {
   position: relative;
 }
 
+#overall-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .char-generator {
   display: inline-block;
   width: 20%;
   height: 100%;
   padding-left: 5%;
+}
+
+.all-proficiencies {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #display-box {
@@ -82,36 +92,34 @@ button {
 #skill-checks {
   display: inline-flex;
   padding-bottom: 5%;
-  font-family: 'Oldenburg', cursive;
+  font-family: "Architects Daughter", cursive;
   font-size: x-large;
-  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 h2 {
-  font-family: 'Oldenburg', cursive;
+  font-family: "Architects Daughter", cursive;
   font-size: xx-large;
-  text-shadow: 2px 2px goldenrod;
 }
 
 #ability-header, #skill-header {
-  font-family: 'Oldenburg', cursive;
+  font-family: "Architects Daughter", cursive;
   font-size: x-large;
 }
 
 input[type=text] {
-  font-family: 'Oldenburg', cursive;
+  font-family: "Architects Daughter", cursive;
   font-size: large;
 }
 
 label {
-  font-family: 'Oldenburg', cursive;
+  font-family: "Architects Daughter", cursive;
   font-size: large;
 }
 
 p {
-  font-family: 'Oldenburg', cursive;
-  font-size: 18;
+  font-family: "Architects Daughter", cursive;
+  font-size: large;
 }
 
 #character-info p {
@@ -119,7 +127,7 @@ p {
 }
 
 div {
-  font-family: 'Oldenburg', cursive;
+  font-family: "Architects Daughter", cursive;
   font-size: medium;
 }
 
@@ -134,10 +142,6 @@ footer {
 
 footer button {
   padding: 10px;
-  font-family: 'MedievalSharp', cursive;
-  background-color: transparent;
-  color: brown;
-  font-size: xx-large;
 }
 
 iframe {
@@ -146,12 +150,8 @@ iframe {
 
 button:hover {
   transform: scale(1.04, 1);
-  background-color: darkred;
+  background-color: #a00e1a;
   text-decoration: none;
-}
-
-button.saving-throw, button.skill-check {
-  font-size: 12px;
 }
 
 #github {
@@ -159,5 +159,5 @@ button.saving-throw, button.skill-check {
 }
 
 #linkedin {
-  height: 150px
+  height: 150px;
 }
