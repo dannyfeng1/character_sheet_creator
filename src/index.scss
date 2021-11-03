@@ -16,6 +16,23 @@ h1 {
 body {
   background-image: url(https://i.pinimg.com/originals/7c/f7/49/7cf7492d074dedafb226f7d69b3ea7df.jpg);
   position: relative;
+  max-height: 100vh;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    padding-right: 15px;
+  }
+
+  img {
+    height: 100px;
+    width: auto;
+  }
 }
 
 #overall-container {
